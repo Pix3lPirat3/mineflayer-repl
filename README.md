@@ -1,48 +1,48 @@
-<h1 align="center">mineflayer-plugin-template</h1>
-<p align="center"><i>A simple template repository for developing Mineflayer plugins through Typescript.</i></p>
-
-<p align="center">
-  <img src="https://github.com/TheDudeFromCI/mineflayer-plugin-template/workflows/Build/badge.svg" />
-  <img src="https://img.shields.io/npm/v/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/github/repo-size/TheDudeFromCI/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/npm/dm/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/github/contributors/TheDudeFromCI/mineflayer-plugin-template" />
-  <img src="https://img.shields.io/github/license/TheDudeFromCI/mineflayer-plugin-template" />
-</p>
+<h1 align="center">mineflayer-repl</h1>
+<p align="center"><i>A plugin that allows command input via the console.</i></p>
 
 ---
+
+### Notes
+
+This project was rushed to a quick release, and is in no way stable.
 
 ### Getting Started
 
 This plugin is built using Node and can be installed using:
 ```bash
-npm install --save mineflayer-plugin-template
+npm install --save mineflayer-repl
 ```
-
-This plugin has a relies on [random-plugin]() for a-b-c. That plugin should be loaded first.
 
 ### Simple Bot
 
 The brief description goes here.
 
 ```js
-// Create your bot
-const mineflayer = require("mineflayer");
-const bot = mineflayer.createBot({ username: "Player" });
 
-// Do stuff
-bot.doStuff()
+const mineflayer = require('mineflayer')
+const { log, replPlugin } = require('./replPlugin.js');
+
+const bot = mineflayer.createBot({ })
+replPlugin(bot);
+
+bot.repl.on('enter', function(command) {
+    if(command.length === 0) return;
+    if(command === 'quit') return bot.quit();
+});
+
+
 ```
 
 ### Documentation
 
-[API](https://github.com/TheDudeFromCI/mineflayer-plugin-template/blob/master/docs/api.md)
+[API](https://github.com/Pix3lPirat3/mineflayer-repl/blob/master/docs/api.md)
 
-[Examples](https://github.com/TheDudeFromCI/mineflayer-plugin-template/tree/master/examples)
+[Examples](https://github.com/Pix3lPirat3/mineflayer-repl/tree/master/examples)
 
 ### License
 
-This project uses the [MIT](https://github.com/TheDudeFromCI/mineflayer-plugin-template/blob/master/LICENSE) license.
+This project uses the [MIT](https://github.com/Pix3lPirat3/mineflayer-repl/blob/master/LICENSE) license.
 
 ### Contributions
 

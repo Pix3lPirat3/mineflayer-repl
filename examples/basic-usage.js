@@ -8,7 +8,7 @@ if (process.argv.length < 4 || process.argv.length > 6) {
 }
 
 const mineflayer = require('mineflayer')
-const pluginTemplate = require('mineflayer-plugin-template')
+const { log, replPlugin } = require('./replPlugin.js');
 
 const bot = mineflayer.createBot({
   host: process.argv[2],
@@ -16,5 +16,9 @@ const bot = mineflayer.createBot({
   username: process.argv[4] ? process.argv[4] : 'PluginTemplate',
   password: process.argv[5]
 })
+replPlugin(bot);
 
-bot.loadPlugin(pluginTemplate)
+bot.repl.on('enter', function(command) {
+    if(command.length === 0) return;
+    log('USER HIT ENTER AND SENT:' , command)
+});

@@ -1,6 +1,6 @@
 # API <!-- omit in toc -->
 
-Welcome to the *mineflayer-plugin-template* API documentation page.
+Welcome to the *mineflayer-repl* API documentation page.
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -8,4 +8,6 @@ Welcome to the *mineflayer-plugin-template* API documentation page.
 
 ## 1. Summary
 
-The summary.
+Just follow the example
+
+Reminder: Use the `log` function in place of `console.log`, or your input may look broken (but will still work)
