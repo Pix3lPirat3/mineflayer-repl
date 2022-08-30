@@ -21,7 +21,7 @@ The brief description goes here.
 ```js
 
 const mineflayer = require('mineflayer')
-const { log, replPlugin } = require('./replPlugin.js');
+const { log, replPlugin } = require('mineflayer-repl');
 
 const bot = mineflayer.createBot({ })
 replPlugin(bot);

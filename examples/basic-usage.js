@@ -8,7 +8,7 @@ if (process.argv.length < 4 || process.argv.length > 6) {
 }
 
 const mineflayer = require('mineflayer')
-const { log, replPlugin } = require('./replPlugin.js');
+const { log, replPlugin } = require('mineflayer-repl');
 
 const bot = mineflayer.createBot({
   host: process.argv[2],

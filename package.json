@@ -1,8 +1,8 @@
 {
   "name": "mineflayer-repl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Mineflayer plugin to allow console input.",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Pix3lPirat3/mineflayer-repl.git"
